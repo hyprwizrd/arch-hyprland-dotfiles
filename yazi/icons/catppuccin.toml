@@ -1,0 +1,14 @@
+[filetype]
+directory = ""
+file = ""
+executable = "󰘧"
+symlink = ""
+archive = ""
+audio = ""
+video = ""
+image = "󰋫"
+document = "󰈙"
+code = "󰘦"
+fifo = ""
+socket = ""
+

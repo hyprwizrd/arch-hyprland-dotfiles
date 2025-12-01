@@ -1,0 +1,158 @@
+/* ──────────────────────────────────────────────
+ * Waybar • Catppuccin Mocha – Enhanced
+ * ──────────────────────────────────────────── */
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+}
+
+/* Bar background – base */
+window#waybar {
+  background-color: #1e1e2e;
+  transition-property: background-color, opacity;
+  transition-duration: 0.25s;
+}
+
+window#waybar.hidden {
+  opacity: 0.0;
+}
+
+/* ─── Workspaces ───────────────────────────── */
+
+#workspaces {
+  background: transparent;
+}
+
+#workspaces button {
+  all: initial;                    /* reset GTK junk */
+  min-width: 0;
+  padding: 3px 9px;
+  margin: 4px 4px;
+  border-radius: 3px;
+  background-color: #313244;       /* surface0 */
+  color: #b4befe;                  /* lavender */
+  font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+#workspaces button.active {
+  background-color: #cba6f7;       /* mauve */
+  color: #1e1e2e;
+  font-weight: 600;
+}
+
+#workspaces button:hover {
+  background-color: #89b4fa;       /* blue */
+  color: #1e1e2e;
+}
+
+#workspaces button.urgent {
+  background-color: #f38ba8;       /* red */
+  color: #1e1e2e;
+}
+
+/* ─── Shared style for modules on the right ─── */
+
+#memory,
+#custom-power,
+#battery,
+#backlight,
+#wireplumber,
+#network,
+#clock,
+#tray {
+  margin: 4px 4px;
+  padding: 3px 10px;
+  background-color: #313244;       /* surface0 */
+  border-radius: 3px;            /* pill chips */
+  color: #cdd6f4;
+}
+
+/* subtle hover glow */
+#memory:hover,
+#custom-power:hover,
+#battery:hover,
+#backlight:hover,
+#wireplumber:hover,
+#network:hover,
+#clock:hover,
+#tray:hover {
+  background-color: #45475a;       /* surface1 */
+}
+
+/* ─── Arch logo (no background) ─────────────── */
+
+#custom-logo {
+  padding: 0 6px;
+  margin: 4px 6px 4px 0px;        /* small gap from screen edge */
+  font-size: 18px;
+  border-radius: 0;                /* no bubble */
+  background: transparent;         /* ❗ no bg behind logo */
+  color: #89b4fa;                  /* blue accent */
+}
+
+/* ─── Individual accents ───────────────────── */
+
+#memory {
+  color: #fab387;                  /* peach */
+  padding-right: 17px;
+}
+
+#battery {
+  color: #f38ba8;                  /* red */
+  padding-right: 17px;
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  color: #ff0000;
+}
+
+#battery.charging {
+  color: #a6e3a1;                  /* green */
+}
+
+#backlight {
+  color: #fab387;                  /* peach */
+}
+
+#wireplumber {
+  color: #f9e2af;                  /* yellow */
+  padding-right: 17px;
+}
+
+#network {
+  color: #94e2d5;                  /* teal */
+  padding-right: 17px;
+}
+
+/* Clock – your custom soft mauve */
+#clock {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  color: #ddb6f2;
+}
+
+/* power / session module */
+#custom-power {
+  color: #f2cdcd;                  /* flamingo */
+  padding-right: 12px;
+}
+
+/* ─── Tooltips ─────────────────────────────── */
+
+tooltip {
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #1e1e2e;       /* base */
+}
+
+tooltip label {
+  padding: 2px 4px;
+  background-color: transparent;
+  color: #cdd6f4;
+}
+

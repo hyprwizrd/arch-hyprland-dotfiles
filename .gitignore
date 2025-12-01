@@ -1,0 +1,18 @@
+cat << 'EOF' > .gitignore
+# Generic junk
+*.log
+*.swp
+*.swo
+
+# Node
+node_modules/
+
+# Cache
+.cache/
+*.cache
+
+# Secrets (example paths, adjust as needed)
+secrets/
+.env
+EOF
+

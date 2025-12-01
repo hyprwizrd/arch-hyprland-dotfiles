@@ -1,0 +1,142 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "height": 26,                // a bit taller so pills/icons breathe
+  "fixed-center": true,        // keeps clock perfectly centered
+
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "tray",
+    "memory",
+    "network",
+    "wireplumber",
+    "battery",
+    "custom/power"
+  ],
+
+  // (optional, not used yet – fine to keep if you plan to show it later)
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-click-right": "fullscreen",
+    "icon-theme": "WhiteSur",
+    "icon-size": 25,
+    "tooltip-format": "{title}"
+  },
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": "󰍛 {}%",
+    "max-length": 6,           // shorter to avoid pill stretching
+    "on-click": "alacritty --title btop -e btop"
+  },
+
+  "tray": {
+    "spacing": 10,
+    "icon-size": 16          // consistent small icons
+  },
+
+  "clock": {
+    "tooltip-format": "{calendar}",
+    "format": "  {:%I:%M %p}",
+    "format-alt": "  {:%a, %d %b %Y}"
+  },
+
+  "network": {
+    "format-wifi": "{icon}",
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    "format-ethernet": "󰀂",
+    "format-alt": "󱛇",
+    "format-disconnected": "󰖪",
+
+    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+
+    "on-click": "alacritty --title nmtui -e nmtui",
+
+    "interval": 5,
+    "nospacing": 1
+  },
+
+  "wireplumber": {
+    "format": "{icon}",
+    "format-bluetooth": "󰂰",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "headphone": "",
+      "default": ["󰖀","󰕾",""]
+    },
+    "tooltip-format": "Volume : {volume}%",
+    "on-click": "pamixer -t",
+    "scroll-step": 1,
+    "nospacing": 1
+  },
+
+  "custom/logo": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/launchers/type-1/launcher.sh &"
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": {
+      "charging": [
+        "󰢜","󰂆","󰂇","󰂈","󰢝",
+        "󰂉","󰢞","󰂊","󰂋","󰂅"
+      ],
+      "default": [
+        "󰁺","󰁻","󰁼","󰁽","󰁾",
+        "󰁿","󰂀","󰂁","󰂂","󰁹"
+      ]
+    },
+    "format-full": "Charged ",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "tooltip": false
+  },
+
+  "custom/power": {
+    "format": "󰤆",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
+  }
+}
+
