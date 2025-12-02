@@ -1,61 +1,157 @@
+# [HyprWizrd]
+## Screenshots
 
-### ---------------------------
-###  Still under development !
-### ---------------------------
+![description]()
 
-# 🌙 HyprWizrd – Arch Linux Hyprland Rice  
-A clean, modern, and minimal Hyprland setup built on Arch Linux.  
-This rice focuses on a cohesive visual experience using Catppuccin-inspired colors, fast tools, and lightweight applications configured for speed and aesthetics.
+## Hyprland Dotfiles – Arch Linux + Catppuccin = Purrfection ☕
 
----
+A clean, minimal and fully themed Hyprland setup for Arch Linux, styled with a Catppuccin Mocha inspired aesthetic.  
+This dotfile collection includes a polished workflow across the terminal, bar, notifications, shell, system tools, and UI.
 
-## ✨ Features
-- **Hyprland** dynamic window manager with beautiful animations  
-- **Alacritty** terminal with Catppuccin theme  
-- **Dunst** notification daemon with custom styling  
-- **Cava** audio visualizer  
-- **Fastfetch** stylish system info display  
-- **eza** (modern ls) config  
-- **Btop** for system monitoring  
-- **GTK 3/4 themes** matched to the rice  
-- Custom `.bashrc` with aliases, prompt styling, and quality-of-life tweaks  
+## Summary of Used Software
 
----
+**Core Environment**
+- Hyprland (Window Manager)
+- Waybar (Top Bar)
+- Rofi (Launcher / Powermenu)
+- Hyprlock (Lockscreen)
+- Hyprpaper (Wallpaper daemon)
+- Hypridle (Idle daemon)
+- Hyprshot (Screenshot utility)
+- Hyprpicker (Color picker)
 
-## 📁 Included Configurations
+**Terminal & Tools**
+- Kitty / Alacritty (Terminals)
+- Neovim (Editor)
+- Fastfetch (System info)
+- eza (Modern LS)
+- bat (Better cat)
+- btop (Resource Monitor)
+- cava (Audio Visualizer)
 
-All configs are located in this repository exactly as they appear inside `~/.config`:
+**UI / Desktop**
+- Dunst (Notifications)
+- nwg-look (GTK theme manager)
+- Nautilus (File Manager)
+- Yazi (TUI file manager)
+- Zathura (PDF Reader)
 
+## Required Packages
+
+Make sure these packages are installed before applying the dotfiles:
+
+```
+sudo pacman -S hyprland waybar rofi hyprlock hyprpaper hypridle \
+alacritty kitty neovim dunst yazi zathura nautilus nwg-look \
+btop bat eza cava fastfetch hyprshot hyprpicker
+```
+
+## Included Configurations
+
+```
 ~/.config/
-├── alacritty/
-├── bat/
-├── btop/
-├── cava/
-├── dunst/
-├── eza/
-├── fastfetch/
-├── gtk-3.0/
-├── gtk-4.0/
-└── hypr/
+├── alacritty
+├── bat
+├── btop
+├── cava
+├── dunst
+├── eza
+├── fastfetch
+├── hypr
+├── kitty
+├── nvim
+├── rofi
+├── waybar
+├── yazi
+└── zathura
+```
 
-Additionally: ~/.bashrc is included at the root of the repo.
+Additionally:
 
+```
+~/.bashrc
+```
+
+## ⚠️ Backup Before Installing
+
+Backup your current bash configuration:
+
+```
+cp ~/.bashrc ~/.bashrc.backup
+```
+
+Backup configs:
+
+```
+mkdir -p ~/.config-backup
+cp -r ~/.config/* ~/.config-backup/ 2>/dev/null
+```
+
+## Manual Installation (Copy–Paste Method)
+
+Clone the repo:
+
+```
+git clone https://github.com/hyprwizrd/hyprwizrd-dotfiles.git ~/hyprwizrd-dotfiles
+cd ~/hyprwizrd-dotfiles
+```
+
+Copy configs:
+
+```
+cp -r .config/* ~/.config/
+```
+
+Copy bashrc:
+
+```
+cp .bashrc ~/
+```
+
+Reboot:
+
+```
+reboot
+```
 ---
 
-## 🛠️ Manual Installation (No GNU Stow Required)
+## Additional Theming (Catppuccin + Icons + Cursors)
 
-> ⚠️ **Before overwriting anything, always make backups!**
+### Firefox Theme – Catppuccin
+https://addons.mozilla.org/en-US/firefox/addon/catpuccin/
 
-### 1️⃣ Clone the repository
+
+
+### GTK Theme – Catppuccin Mocha
+Install using yay:
 
 ```bash
-
-git clone https://github.com/hyprwizrd/arch-hyprland-dotfiles.git
-cd arch-hyprland-dotfiles
+yay -S catppuccin-gtk-theme-mocha
 ```
 
+Apply via **nwg-look**:
+1. Open `nwg-look`
+2. Select GTK Theme → **Catppuccin-Mocha-Mauve**
+3. Apply
 
-```
-🎨 Screenshots
 
-💬 Notes
+### Cursor Theme – Colloid Cursor (by vinceliuice)
+Download here:
+
+https://www.gnome-look.org/p/1831077
+
+Install and select using **nwg-look** or your system appearance settings.
+
+
+### Folder Icons – MacTahoe Icon Theme (by vinceliuice)
+Icon pack used for folder styling:
+
+https://www.gnome-look.org/p/2299216
+
+Apply using **nwg-look** → Icons → **MacTahoe**.
+
+---
+
+#### ⚠️ Still in development — if something breaks, just pretend it’s a feature 😅
+### Thanks for stopping by! 😊
+
