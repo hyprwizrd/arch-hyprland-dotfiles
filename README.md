@@ -28,6 +28,7 @@ This dotfile collection includes a polished workflow across the terminal, bar, n
 - bat (Better cat)
 - btop (Resource Monitor)
 - cava (Audio Visualizer)
+- imv (Image Viewer)
 
 **UI / Desktop**
 - Dunst (Notifications)
@@ -50,7 +51,7 @@ Make sure these packages are installed before applying the dotfiles:
 ```
 sudo pacman -S hyprland waybar rofi hyprlock hyprpaper hypridle \
 alacritty kitty neovim dunst yazi zathura nautilus nwg-look \
-btop bat eza cava fastfetch hyprshot hyprpicker
+btop bat eza cava fastfetch hyprshot hyprpicker imv
 ```
 
 ## Included Configurations
