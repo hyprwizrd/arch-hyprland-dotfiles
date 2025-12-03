@@ -43,6 +43,12 @@ Install JetBrainsMono Nerd Font:
 sudo pacman -S ttf-jetbrains-mono-nerd
 ```
 
+If SDDM or any app shows incorrect/missing characters, install the full Nerd Fonts package:
+
+``` bash
+sudo pacman -S nerd-fonts
+```
+
 ## Required Packages
 
 Make sure these packages are installed before applying the dotfiles:
@@ -126,13 +132,18 @@ reboot
 
 ### SDDM Theming (Sugar Candy Theme)
 
- 1. Copy Custom Wallpaper
+ 1. Install Sugar Candy Theme
 
 ```bash
-sudo cp sddm_wallpaper/sddm-cat-back.png /usr/share/sddm/themes/Sugar-Candy/Backgrounds/
+yay -S sddm-theme-sugar-candy-git
+```
+ 2. Copy Custom Wallpaper
+
+```bash
+sudo cp ~/hyprwizrd-dotfiles/sddm_wallpaper/sddm-cat-back.png /usr/share/sddm/themes/Sugar-Candy/Backgrounds/
 ```
 
- 2. Edit Theme Config
+ 3. Edit Theme Config
 
 ```bash
 sudo nano /usr/share/sddm/themes/Sugar-Candy/theme.conf
@@ -148,6 +159,18 @@ BackgroundColor="#1e1e2e"
 Font="JetBrainsMono Nerd Font"
 HeaderText="Namaste!"
 FontSize="14"
+```
+
+ 4. Activate the SDDM Theme
+
+``` bash
+sudo nano /etc/sddm.conf
+```
+Add:
+
+``` bash
+[Theme]
+Current=sugar-candy
 ```
 
 ### Firefox Theme – Catppuccin
@@ -181,7 +204,10 @@ https://www.gnome-look.org/p/2299216
 
 Apply using **nwg-look** → Icons → **MacTahoe**.
 
+Reboot for changes.
+
 ---
 
 #### ⚠️ Still in development — if something breaks, just pretend it’s a feature 😅
 ### Thanks for stopping by! 😊
+
