@@ -49,6 +49,7 @@ window#waybar.hidden {
   color: #1e1e2e;
 }
 
+#bluetooth,
 #memory,
 #custom-power,
 #battery,
@@ -64,6 +65,7 @@ window#waybar.hidden {
   color: #cdd6f4;
 }
 
+#bluetooth:hover,
 #memory:hover,
 #custom-power:hover,
 #battery:hover,
@@ -82,6 +84,18 @@ window#waybar.hidden {
   border-radius: 0;
   background: transparent;
   color: #89b4fa;
+}
+
+#bluetooth {
+  color: #74c7ec;
+}
+
+#bluetooth.connected {
+  color: #a6e3a1;
+}
+
+#bluetooth.off {
+  color: #585b70;
 }
 
 #memory {

@@ -4,7 +4,7 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 26,
+  "height": 33,
   "fixed-center": true,
 
   "modules-left": ["custom/logo", "hyprland/workspaces"],
@@ -13,6 +13,7 @@
 
   "modules-right": [
     "tray",
+    "bluetooth",
     "memory",
     "network",
     "wireplumber",
@@ -43,6 +44,20 @@
       "5": []
     }
   },
+  
+  "bluetooth": {
+  	"format": "{icon}",
+    "format-icons": {
+      "on": "󰂯",
+      "off": "󰂲"
+    },
+  	"format-disabled": "",
+    "format-connected": "󰂱 {num_connections}",
+  	"tooltip-format": "{controller_alias}\t{controller_address}",
+  	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+  	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  	"on-click": "~/.config/rofi/bluetooth/rofi-bluetooth"
+},
 
   "memory": {
     "interval": 5,
