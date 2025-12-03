@@ -1,4 +1,4 @@
-# [HyprWizrd]
+# [ HyprwizrD ]
 
 ## Hyprland Dotfiles – Arch Linux + Catppuccin = Purrfection ☕
 
@@ -6,6 +6,27 @@
 
 A clean, minimal and fully themed Hyprland setup for Arch Linux, styled with a Catppuccin Mocha inspired aesthetic.  
 This dotfile collection includes a polished workflow across the terminal, bar, notifications, shell, system tools, and UI.
+
+## 🚀 Updates (Changelog)
+
+### 🆕 Added Features
+- **Rofi Bluetooth Menu** — thanks to  
+  👉 https://github.com/nickclyde/rofi-bluetooth  
+- **Waybar Bluetooth Indicator**
+
+<details>
+<summary>📸 Image Previews ↴</summary>
+
+<table>
+<tr>
+	<td align="center">
+		<img src="https://raw.githubusercontent.com/hyprwizrd/hyprwizrd-dotfiles/main/preview/rofi-bluetooth.png"><br/>
+		<sub><em>Rofi Bluetooth Menu</em></sub>
+	</td>
+</tr>
+</table>
+
+</details>
 
 ## Summary of Used Software
 
