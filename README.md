@@ -193,7 +193,7 @@ Add:
 
 ``` bash
 [Theme]
-Current=sugar-candy
+Current=Sugar-Candy
 ```
 
 ### Firefox Theme – Catppuccin
