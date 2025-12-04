@@ -61,7 +61,7 @@ This dotfile collection includes a polished workflow across the terminal, bar, n
 Install JetBrainsMono Nerd Font:
 
 ```bash
-sudo pacman -S ttf-jetbrains-mono-nerd
+sudo pacman -S ttf-jetbrains-mono-nerd noto-fonts
 ```
 
 If SDDM or any app shows incorrect/missing characters, install the full Nerd Fonts package:
